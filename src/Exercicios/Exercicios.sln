@@ -24,6 +24,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OAuth", "OAuth", "{822E0844
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OAuthClient", "OAuthClient\OAuthClient.csproj", "{F5AD9A81-8315-4909-B143-18F21EDFB198}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NativeApp", "NativeApp\NativeApp.csproj", "{707049FC-AF34-4302-ACC8-17110536BE5F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -104,6 +106,16 @@ Global
 		{F5AD9A81-8315-4909-B143-18F21EDFB198}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{F5AD9A81-8315-4909-B143-18F21EDFB198}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{F5AD9A81-8315-4909-B143-18F21EDFB198}.Release|x86.ActiveCfg = Release|Any CPU
+		{707049FC-AF34-4302-ACC8-17110536BE5F}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{707049FC-AF34-4302-ACC8-17110536BE5F}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{707049FC-AF34-4302-ACC8-17110536BE5F}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{707049FC-AF34-4302-ACC8-17110536BE5F}.Debug|x86.ActiveCfg = Debug|x86
+		{707049FC-AF34-4302-ACC8-17110536BE5F}.Debug|x86.Build.0 = Debug|x86
+		{707049FC-AF34-4302-ACC8-17110536BE5F}.Release|Any CPU.ActiveCfg = Release|x86
+		{707049FC-AF34-4302-ACC8-17110536BE5F}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{707049FC-AF34-4302-ACC8-17110536BE5F}.Release|Mixed Platforms.Build.0 = Release|x86
+		{707049FC-AF34-4302-ACC8-17110536BE5F}.Release|x86.ActiveCfg = Release|x86
+		{707049FC-AF34-4302-ACC8-17110536BE5F}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -113,5 +125,6 @@ Global
 		{65CF4DDB-4C32-4A6F-8122-D3843AA49ADA} = {1E8060F8-D6B1-48B4-8513-AE9C0B2FC160}
 		{1CFADB45-5A95-4BA6-ADEA-C8868F8D26C7} = {83C49895-4D97-4472-948C-6EFA992B8CB1}
 		{F5AD9A81-8315-4909-B143-18F21EDFB198} = {822E0844-791A-4204-A78A-4EB1B1D8A328}
+		{707049FC-AF34-4302-ACC8-17110536BE5F} = {822E0844-791A-4204-A78A-4EB1B1D8A328}
 	EndGlobalSection
 EndGlobal

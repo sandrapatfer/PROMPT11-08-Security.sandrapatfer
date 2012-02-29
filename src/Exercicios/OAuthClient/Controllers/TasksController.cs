@@ -40,7 +40,7 @@ namespace OAuthClient.Controllers
 
                 httpClient.DefaultRequestHeaders.Authorization =
                     new System.Net.Http.Headers.AuthenticationHeaderValue((string)value["token_type"], (string)value["access_token"]);
-                var stream1 = httpClient.GetAsync("https://www.googleapis.com/tasks/v1/users/sandrapatfer/lists?alt=json&prettyPrint=true").
+                var stream1 = httpClient.GetAsync("https://www.googleapis.com/tasks/v1/users/@me/lists?alt=json&prettyPrint=true").
                     Result.Content.ReadAsStreamAsync().Result;
                 var value2 = JsonValue.Load(stream1);
                 return Content((string)value2);
@@ -132,5 +132,6 @@ namespace OAuthClient.Controllers
                 return View();
             }
         }
+
     }
 }

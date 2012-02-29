@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "TasksImplicitExample";
+}
+
+<h2>Intro about APP</h2>
+
+<a href=@("https://accounts.google.com/o/oauth2/auth?response_type=token&" +
+  "client_id=646897896780.apps.googleusercontent.com&" +
+  "redirect_uri=" + HttpUtility.UrlEncode("http://localhost:49876/Home/TasksImplicitExampleProcessor") + "&" +
+  "scope=" + HttpUtility.UrlEncode("https://www.googleapis.com/auth/tasks.readonly") + "&" +
+  "approval_prompt=force")>
+Click here to login in google</a>
+
