@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Ex4.Models.GoogleTask>
+
+@{
+    ViewBag.Title = "List of tasks";
+}
+
+<h2>Index</h2>
+
+<table>
+    <tr>
+        <th>
+            Title
+        </th>
+        <th>
+            Updated
+        </th>
+        <th>
+            Notes
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Updated)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Notes)
+        </td>
+    </tr>
+}
+
+</table>

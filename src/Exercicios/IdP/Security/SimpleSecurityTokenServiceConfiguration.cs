@@ -14,7 +14,7 @@ namespace IdP.Security
         {
             var store = new X509Store(StoreName.My, StoreLocation.LocalMachine);
             store.Open(OpenFlags.ReadOnly);
-            var certificates = store.Certificates.OfType<X509Certificate2>().Where(c => c.Subject.Contains("signin.idp.prompt11.local"));
+            var certificates = store.Certificates.OfType<X509Certificate2>().Where(c => c.Subject.Contains("sign.idp.prompt11.local"));
             if (certificates.Count() > 0)
             {
                 this.SigningCredentials = new X509SigningCredentials(certificates.First());
