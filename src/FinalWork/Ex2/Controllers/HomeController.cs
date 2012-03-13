@@ -21,6 +21,7 @@ namespace Ex2.Controllers
 
         // GET: /Home/Index
         [RequireClaims(ClaimTypes.Name, ClaimTypes.Email)]
+//        [RequireClaims(ClaimTypes.Name, ClaimTypes.Email, ClaimTypes.WindowsAccountName)]
         public ActionResult Index()
         {
             var redirect = Authentication.Verify(this.User, Request.Url.AbsoluteUri);
@@ -29,17 +30,7 @@ namespace Ex2.Controllers
                 return Redirect(redirect);
             }
 
-            var verificationError = Authentication.VerifyClaims(
-                this.GetType().GetMethod("Index").GetCustomAttributes(typeof(RequireClaimsAttribute), true),
-                this.User);
-            if (verificationError == null)
-            {
-                return View();
-            }
-            else
-            {
-                return View("Error", verificationError);
-            }
+            return View();
         }
     }
 }
