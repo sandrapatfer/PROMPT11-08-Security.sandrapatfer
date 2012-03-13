@@ -22,28 +22,5 @@ namespace Ex2.Utils
             }
             return null;
         }
-
-        internal static string VerifyClaims(object[] callingMethodClaimsAttributes, IPrincipal user)
-        {
-            var ident = user as IClaimsPrincipal;
-            if (ident != null && ident.Identity.IsAuthenticated == true)
-            {
-                foreach (RequireClaimsAttribute attr in callingMethodClaimsAttributes)
-                {
-                    foreach (var claim in attr.Claims)
-                    {
-                        if (ident.Identities[0].Claims.Where(c => c.ClaimType == claim) == null)
-                        {
-                            return string.Format("Claim {0} is missing", claim);
-                        }
-                    }
-                }
-                return null;
-            }
-            else
-            {
-                return "Not authenticated";
-            }
-        }
     }
 }
